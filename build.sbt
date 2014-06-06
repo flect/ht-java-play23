@@ -7,9 +7,8 @@ lazy val root = (project in file(".")).enablePlugins(PlayJava)
 scalaVersion := "2.11.1"
 
 libraryDependencies ++= Seq(
-  javaJdbc,
-  javaEbean,
   cache,
   javaWs,
+  javaJpa,
   "org.hibernate" % "hibernate-entitymanager" % "4.3.5.Final"
 )
