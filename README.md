@@ -2,6 +2,14 @@ ht-java-play23
 ===========
 Sample project that use Java Playframework 2.3 for Heroku training.
 
+Heroku
+--------------
+If it is to push the master branch of Git, wercker will automatically deploy to heroku
+
+[Heroku project](https://dashboard.heroku.com/apps/gramp-heroku-play23/resources/)  
+[Heroku app URL](http://gramp-heroku-play23.herokuapp.com/)
+
+
 How to deploy
 --------------
 
