@@ -1,0 +1,26 @@
+@(message: String)
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			@if(!message.isEmpty()) {
+				<div style="color:red">@message</div>
+			}
+
+			<form action="/account/register" method="POST">
+				<dl>
+					<dd>Name</dd>
+					<dd><input type="TEXT" name="name"></dd>
+					<dd>Password</dd>
+					<dd><input type="PASSWORD" name="password"></dd>
+					<dd><input type="SUBMIT" value="register">
+				</dl>
+			</form>
+		</div>
+	</body>
+</html>
