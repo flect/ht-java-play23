@@ -1,0 +1,20 @@
+@(account: models.entities.Account)
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+
+			@if(account.getName() == null) {
+			<div>Account not registerd.</div>
+			<a href="/account/register">Please register</a>
+			} else {
+			<div> Welcome @account.getName() !</div>
+			}
+		</div>
+	</body>
+</html>
