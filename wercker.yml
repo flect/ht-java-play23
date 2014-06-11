@@ -8,3 +8,6 @@ build:
             name: run test
             code: |-
                 ./activator test
+deploy:
+    steps:
+        - heroku-deploy
