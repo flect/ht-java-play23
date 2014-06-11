@@ -1,0 +1,10 @@
+box: mihkels/java8-oracle@0.0.1
+#services:
+#    - mies/rethinkdb
+build:
+    steps:
+        # Execute the bundle install step, a step provided by wercker
+        - script:
+            name: run test
+            code: |-
+                ./activator test
