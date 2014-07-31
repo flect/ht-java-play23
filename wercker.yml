@@ -8,6 +8,7 @@ build:
             name: run test
             code: |-
                 ./activator test
-deploy:
-    steps:
-        - heroku-deploy
+        - script:
+            name: copy report
+            code: |-
+                cp ./target/test-reports $WERCKER_REPORT_ARTIFACTS_DIR/
