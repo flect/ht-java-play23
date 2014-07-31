@@ -11,4 +11,4 @@ build:
         - script:
             name: copy report
             code: |-
-                cp ./target/test-reports $WERCKER_REPORT_ARTIFACTS_DIR/
+                cp -r ./target/test-reports $WERCKER_REPORT_ARTIFACTS_DIR/
