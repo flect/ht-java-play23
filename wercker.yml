@@ -1,4 +1,5 @@
-box: mihkels/java8-oracle@0.0.1
+box: o-seirou/java8-karma@0.0.3
+#box: mihkels/java8-oracle@0.0.1
 #services:
 #    - mies/rethinkdb
 build:
@@ -7,8 +8,4 @@ build:
         - script:
             name: run test
             code: |-
-                ./activator -Dsbt.ivy.home=$WERCKER_CACHE_DIR test
-        - script:
-            name: copy report
-            code: |-
-                cp -r ./target/test-reports $WERCKER_REPORT_ARTIFACTS_DIR/
+                ./activator -Dsbt.global.base=$SBT_GLOBAL/0.13 -Dsbt.boot.directory=$SBT_GLOBAL/boot -Dsbt.repository.config=$SBT_GLOBAL/repositories -Dsbt.ivy.home=$IVY_CACHE_DIR test
