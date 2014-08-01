@@ -7,7 +7,7 @@ build:
         - script:
             name: run test
             code: |-
-                ./activator test
+                ./activator -Dsbt.ivy.home=$WERCKER_CACHE_DIR test
         - script:
             name: copy report
             code: |-
